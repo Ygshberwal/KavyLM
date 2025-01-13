@@ -30,10 +30,10 @@ reversed_sorted_dict = load_reversed_sorted_dict(reversed_dict_file)
 
 # Find rhyming words
 input_word = input("Enter a Hindi word: ")
-match_length = int(input("Enter the number of characters to match (2 or 3): "))
+match_length = int(input("Enter the number of characters to match (1 to 6): "))
 
-if match_length not in [2, 3]:
-    print("Invalid match length! Please enter 2 or 3.")
+if match_length not in [1, 2, 3, 4 ,5 ,6]:
+    print("Invalid match length! Please enter 1 to 6.")
 else:
     rhyming_words = find_rhyming_words(input_word, reversed_sorted_dict, match_length=match_length)
 
